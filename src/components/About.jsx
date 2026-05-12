@@ -3,11 +3,11 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import profile from "../assets/profile.jpg";
 
-const skills = ["React", "JavaScript", "CSS", "Django", "Python", "Machine Learning", "Data Analysis", "Figma"];
+const skills = ["React", "JavaScript", "CSS", "Django", "Python", "Machine Learning", "Data Analysis"];
 
 export default function About() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: false, margin: "-100px" });
 
   return (
     <section className="about" id="about" ref={ref}>

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-
+import Navbar from "./components/Navbar"; 
 import Hero from "./components/hero";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -26,7 +26,7 @@ export default function App() {
     <div>
       <div className="cursor" />
       <div className="cursor-follower" />
-    
+      <Navbar />  
       <Hero />
       <About />
       <Contact />

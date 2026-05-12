@@ -1,6 +1,9 @@
-import { motion } from "framer-motion";
+
+
 
 export default function Footer() {
+  
+
   return (
     <>
       <footer className="footer">
@@ -17,8 +20,8 @@ export default function Footer() {
         <div>
           <h4>Connect</h4>
           <a href="https://github.com/LalitaGotame" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="#">LinkedIn</a>
-          <a href="#">Twitter</a>
+          <a href="https://linkedin.com/in/lalitagotame" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          
         </div>
         <div>
           <h4>Stack</h4>

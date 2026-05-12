@@ -24,6 +24,7 @@ body {
   cursor: none;
 }
 
+
 /* Custom cursor */
 .cursor {
   width: 10px;
@@ -105,7 +106,10 @@ body {
 .navbar a:hover::after {
   width: 100%;
 }
-
+.navbar-brand{
+  color:var(--muted);
+  font-family: 'Cormorant Garamond', serif;
+}
 /* Hero */
 .hero {
   min-height: 100vh;
