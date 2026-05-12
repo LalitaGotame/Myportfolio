@@ -1,34 +1,55 @@
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+
 export default function Contact() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
-  
-   <motion.section
-      initial={{ opacity: 0, x: 100 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1 }}
-      className="contact"> 
-    
-   <section className="contact">
+    <section className="contact" id="contact" ref={ref}>
+      <motion.p
+        className="contact-label"
+        initial={{ opacity: 0, y: 20 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.6 }}
+      >
+        Let's work together
+      </motion.p>
 
-      <h2>Contact me</h2>
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, delay: 0.1 }}
+      >
+        Say Hello
+      </motion.h2>
 
-      <form>
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        Have a project in mind or just want to connect? <br />
+        I'd love to hear from you.
+      </motion.p>
 
-        <div className="row">
+      <motion.div
+        className="contact-form"
+        initial={{ opacity: 0, y: 40 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, delay: 0.3 }}
+      >
+        <div className="form-row">
           <input type="text" placeholder="First name" />
           <input type="text" placeholder="Last name" />
         </div>
-
         <input type="email" placeholder="Email address" />
-
-        <button type="submit">
-          Submit
+        <textarea rows={5} placeholder="Your message" />
+        <button type="button" className="submit-btn">
+          Send message →
         </button>
-
-      </form>
-
+      </motion.div>
     </section>
-   </motion.section>
-   
-  )
+  );
 }
