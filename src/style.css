@@ -21,34 +21,12 @@ body {
   color: var(--text);
   font-family: 'DM Mono', monospace;
   overflow-x: hidden;
-  cursor: none;
+  cursor: default ;
 }
 
 
-/* Custom cursor */
-.cursor {
-  width: 10px;
-  height: 10px;
-  background: var(--accent);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  transition: transform 0.15s ease;
-  mix-blend-mode: difference;
-}
 
-.cursor-follower {
-  width: 35px;
-  height: 35px;
-  border: 1px solid var(--accent);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9998;
-  transition: all 0.3s ease;
-  mix-blend-mode: difference;
-}
+
 
 /* Navbar */
 .navbar {
@@ -110,6 +88,9 @@ body {
   color:var(--muted);
   font-family: 'Cormorant Garamond', serif;
 }
+
+
+
 /* Hero */
 .hero {
   min-height: 100vh;
@@ -239,6 +220,7 @@ body {
   opacity: 0.4;
 }
 
+
 .profile {
   width: 100%;
   max-width: 360px;
@@ -304,6 +286,24 @@ body {
   border: 1px solid var(--border);
   border-radius: 2px;
   z-index: -1;
+}
+
+.projects-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+padding-left: 250px;
+
+}
+
+.project-card {
+  width: 300px;
+  padding: 20px;
+  background: #1e1e1e;
+  border-radius: 20px;
+  color: white;
+ padding-right: 20px;
+ 
 }
 
 /* Skills tags */
