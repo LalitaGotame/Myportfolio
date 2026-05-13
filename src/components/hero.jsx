@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import welcome from "../assets/welcome.jpg";  
 
 export default function Hero() {
   const ref = useRef(null);
@@ -58,7 +59,7 @@ export default function Hero() {
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 1.2, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
         >
-          <img src="/profile.jpg" alt="Lalita Gotame" className="profile" />
+          <img src={welcome} alt=" " className="profile" />
         </motion.div>
       </div>
     </section>
