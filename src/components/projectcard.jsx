@@ -45,7 +45,7 @@ export default function ProjectCard() {
           transition={{ duration: 0.5, delay: i * 0.2 }}
         >
           
-          <a href={project.github} class="project-link" target="_blank" rel="noopener noreferrer">
+          <a href={project.github} className="project-link" target="_blank" rel="noopener noreferrer">
             <img src={project.image} alt={project.title} />
           </a>
           <h2>{project.title}</h2>
