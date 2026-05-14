@@ -1,4 +1,5 @@
-import { animate, motion, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { useRef } from "react";
 import z from "../assets/z.jpg"
 import nlp from "../assets/nlp.jpg"
