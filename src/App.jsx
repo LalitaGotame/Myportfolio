@@ -13,7 +13,7 @@ export default function App() {
     <div>
      
      
-      <Navbar /> 
+      <NavBar /> 
       <Hero />
       <About />
       <ProjectCard /> 
