@@ -1,5 +1,5 @@
 
-export default function Navbar() {  
+export default function NavBar() {  
 return(
     <nav className="navbar">
         <div className="navbar-brand">
