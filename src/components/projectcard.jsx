@@ -1,9 +1,9 @@
 import { useInView } from "framer-motion";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import z from "../assets/z.jpg"
-import nlp from "../assets/nlp.jpg"
-import hash from "../assets/hash.jpg" 
+import z from "../assets/z.jpg";
+import nlp from "../assets/nlp.jpg";
+import hash from "../assets/hash.jpg";
 
 const projects = [
   {
@@ -24,16 +24,14 @@ const projects = [
     title: "Hashtag Analysis",
     desc: "Social media hashtag tracking system.",
     image: hash,
-    github:"https://github.com/LalitaGotame/Tiktok-Hashtag-Analysis",
+    github: "https://github.com/LalitaGotame/Tiktok-Hashtag-Analysis",
     progress: "System design phase"
   },
 ];
 
-  
-
 export default function ProjectCard() {
   const ref = useRef(null);
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, { once: false });
 
   return (
     <div className="projects-container" ref={ref}>
@@ -45,7 +43,6 @@ export default function ProjectCard() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: i * 0.2 }}
         >
-          
           <a href={project.github} className="project-link" target="_blank" rel="noopener noreferrer">
             <img src={project.image} alt={project.title} />
           </a>

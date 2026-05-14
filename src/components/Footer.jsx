@@ -32,7 +32,6 @@ export default function Footer() {
       </footer>
       <div className="footer-bottom">
         <span>© 2025 Lalita Gotame</span>
-        <span>Built with React + Framer Motion</span>
       </div>
     </>
   );
